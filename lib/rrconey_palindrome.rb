@@ -2,7 +2,14 @@
 
 require_relative "rrconey_palindrome/version"
 
-module RrconeyPalindrome
-  class Error < StandardError; end
-  # Your code goes here...
+
+class String
+
+  def palindrome?
+    processed_content == processed_content.reverse
+  end
+
+  def processed_content
+    self.downcase
+  end
 end
